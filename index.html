@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expansão 2026 - Dashboard Curadoria de Vendas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #f5f8fa;
+            color: #1a202c;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            background: white;
+            border-bottom: 1px solid #dbe4ed;
+            padding: 20px 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .header-title {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header-title h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0091ae;
+            margin-bottom: 4px;
+        }
+
+        .header-title p {
+            font-size: 14px;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .header-timestamp {
+            text-align: right;
+            font-size: 13px;
+            color: #94a3b8;
+        }
+
+        .header-filters {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            border: 1px solid #dbe4ed;
+            background: white;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #475569;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .filter-btn:hover {
+            border-color: #0091ae;
+            color: #0091ae;
+        }
+
+        .header-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .period-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .period-btn {
+            padding: 8px 16px;
+            border: 1px solid #dbe4ed;
+            background: white;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #475569;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .period-btn.active {
+            background: #0091ae;
+            color: white;
+            border-color: #0091ae;
+        }
+
+        .comparison-group {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .comparison-dropdown {
+            padding: 8px 16px;
+            border: 1px solid #dbe4ed;
+            background: white;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #475569;
+            cursor: pointer;
+        }
+
+        .comparison-badge {
+            padding: 4px 12px;
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            border-radius: 4px;
+            font-size: 12px;
+            color: #0369a1;
+            font-weight: 600;
+        }
+
+        /* Main Content */
+        main {
+            padding: 20px 0;
+        }
+
+        .row {
+            display: grid;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .row.two-col {
+            grid-template-columns: 2fr 1fr;
+        }
+
+        .row.three-col {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .row.four-col {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .row.full {
+            grid-template-columns: 1fr;
+        }
+
+        /* Card Styles */
+        .card {
+            background: white;
+            border: 1px solid #dbe4ed;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #f1f5f9;
+            padding-bottom: 12px;
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a202c;
+        }
+
+        /* Visão de Metas */
+        .metas-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .meta-item {
+            padding: 16px;
+            background: #f9fafb;
+            border-radius: 6px;
+            border: 1px solid #f1f5f9;
+        }
+
+        .meta-label {
+            font-size: 12px;
+            color: #94a3b8;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .meta-value {
+            font-size: 22px;
+            font-weight: 700;
+            color: #0091ae;
+            margin-bottom: 4px;
+        }
+
+        .meta-subtext {
+            font-size: 12px;
+            color: #64748b;
+        }
+
+        .meta-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        thead {
+            background: #f9fafb;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        th {
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            color: #475569;
+            font-size: 12px;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #f1f5f9;
+            color: #475569;
+        }
+
+        tbody tr:hover {
+            background: #f9fafb;
+        }
+
+        /* Bar Charts */
+        .chart-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chart-bars {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            height: 200px;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .bar-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+        }
+
+        .bar {
+            width: 100%;
+            background: #0091ae;
+            border-radius: 6px 6px 0 0;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .bar:hover {
+            background: #007a94;
+        }
+
+        .bar-value {
+            font-size: 12px;
+            font-weight: 600;
+            color: #0091ae;
+            margin-top: 8px;
+        }
+
+        .bar-label {
+            font-size: 12px;
+            color: #64748b;
+            text-align: center;
+            margin-top: 8px;
+            font-weight: 500;
+        }
+
+        /* KPI Numbers */
+        .kpi-card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .kpi-number {
+            font-size: 42px;
+            font-weight: 700;
+            color: #0091ae;
+            margin-bottom: 8px;
+            line-height: 1;
+        }
+
+        .kpi-label {
+            font-size: 13px;
+            color: #64748b;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .comparison-badge-kpi {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 6px 12px;
+            background: #ecfdf5;
+            color: #065f46;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            width: fit-content;
+        }
+
+        .comparison-badge-kpi.down {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        /* Gauge */
+        .gauge-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gauge-svg {
+            width: 100%;
+            height: auto;
+            max-width: 200px;
+        }
+
+        .gauge-label {
+            font-size: 13px;
+            color: #64748b;
+            margin-top: 12px;
+            font-weight: 500;
+        }
+
+        .gauge-value {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0091ae;
+            margin-top: 4px;
+        }
+
+        /* Forecast Classification */
+        .forecast-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .forecast-item {
+            padding: 12px;
+            background: #f9fafb;
+            border-radius: 6px;
+            border-left: 3px solid #0091ae;
+        }
+
+        .forecast-item.best-case {
+            border-left-color: #f59e0b;
+        }
+
+        .forecast-item.commit {
+            border-left-color: #059669;
+        }
+
+        .forecast-item.pipeline {
+            border-left-color: #3b82f6;
+        }
+
+        .forecast-label {
+            font-size: 11px;
+            color: #94a3b8;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .forecast-count {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 4px;
+        }
+
+        .forecast-value {
+            font-size: 13px;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        /* Deals Table */
+        .deals-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        .deal-name-link {
+            color: #0091ae;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .deal-name-link:hover {
+            text-decoration: underline;
+        }
+
+        .stage-badge, .forecast-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            color: white;
+        }
+
+        .stage-meeting { background: #00a4bd; }
+        .stage-discovery { background: #0091ae; }
+        .stage-tech { background: #00bda5; }
+        .stage-proposal { background: #00d4aa; }
+        .stage-negotiation { background: #38b2ac; }
+        .stage-close { background: #2d9d92; }
+
+        .forecast-pipeline { background: #3b82f6; }
+        .forecast-best { background: #f59e0b; }
+        .forecast-commit { background: #059669; }
+
+        .freeze-section {
+            border-top: 2px dashed #dbe4ed;
+            margin-top: 16px;
+            padding-top: 16px;
+        }
+
+        .freeze-label {
+            font-size: 11px;
+            color: #94a3b8;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        /* Funnel */
+        .funnel-container {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 24px;
+            justify-content: space-around;
+            align-items: flex-end;
+            height: 120px;
+        }
+
+        .funnel-stage {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+        }
+
+        .funnel-bar {
+            width: 100%;
+            background: linear-gradient(180deg, #0091ae 0%, #006a82 100%);
+            border-radius: 4px 4px 0 0;
+            position: relative;
+        }
+
+        .funnel-value {
+            font-size: 13px;
+            font-weight: 600;
+            color: #0091ae;
+            margin-top: 8px;
+        }
+
+        .funnel-label {
+            font-size: 11px;
+            color: #64748b;
+            text-align: center;
+            margin-top: 4px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .row.two-col {
+                grid-template-columns: 1fr;
+            }
+
+            .row.three-col {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .row.four-col {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-top {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            .header-timestamp {
+                text-align: left;
+            }
+
+            .row.three-col,
+            .row.four-col {
+                grid-template-columns: 1fr;
+            }
+
+            .metas-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header-bottom {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .header-filters {
+                flex-direction: column;
+            }
+
+            .period-buttons,
+            .comparison-group {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .comparison-dropdown {
+                width: 100%;
+            }
+        }
+
+        /* Loading State */
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        .error {
+            background: #fee2e2;
+            border: 1px solid #fecaca;
+            color: #991b1b;
+            padding: 16px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="header-title">
+                    <h1>☆ Expansão 2026</h1>
+                    <p>Dashboard Curadoria de Vendas — BU Expansão</p>
+                </div>
+                <div class="header-timestamp" id="timestamp"></div>
+            </div>
+
+            <div class="header-filters">
+                <button class="filter-btn">Filtros rápidos</button>
+                <button class="filter-btn">Intervalo de datas</button>
+                <button class="filter-btn">BDRs/CSM</button>
+                <button class="filter-btn">Estratégia</button>
+                <button class="filter-btn">Tipo de expansão</button>
+                <button class="filter-btn">Loops</button>
+            </div>
+
+            <div class="header-bottom">
+                <div class="period-buttons">
+                    <button class="period-btn active" data-period="mes">Este Mês</button>
+                    <button class="period-btn" data-period="trimestre">Trimestre</button>
+                    <button class="period-btn" data-period="h1">H1 2026</button>
+                </div>
+                <div class="comparison-group">
+                    <label style="font-size: 13px; color: #475569; font-weight: 500;">Comparar com:</label>
+                    <select id="comparisonSelect" class="comparison-dropdown">
+                        <option value="sem">Sem comparação</option>
+                        <option value="mes-anterior">Mês Anterior</option>
+                        <option value="mesmo-mes-ano">Mesmo mês ano passado</option>
+                        <option value="trimestre-anterior">Trimestre Anterior</option>
+                    </select>
+                </div>
+                <div class="comparison-badge" id="comparisonBadge"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container" id="content">
+            <div class="loading">Carregando dados...</div>
+        </div>
+    </main>
+
+    <script>
+        let dashboardData = {};
+        let currentComparison = 'sem';
+
+        function formatBRL(value) {
+            return new Intl.NumberFormat('pt-BR', {
+                style: 'currency',
+                currency: 'BRL',
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            }).format(value);
+        }
+
+        function formatNumber(value) {
+            return new Intl.NumberFormat('pt-BR').format(value);
+        }
+
+        function formatDate(dateStr) {
+            if (!dateStr) return '';
+            const date = new Date(dateStr);
+            return date.toLocaleDateString('pt-BR', {
+                day: '2-digit',
+                month: '2-digit',
+                year: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+        }
+
+        function createComparisonBadge(currentValue, comparisonValue) {
+            if (!comparisonValue) return '';
+            const variation = ((currentValue - comparisonValue) / comparisonValue) * 100;
+            const isPositive = variation >= 0;
+            const arrow = isPositive ? '▲' : '▼';
+            const className = isPositive ? '' : ' down';
+            return `<div class="comparison-badge-kpi${className}">${arrow} ${Math.abs(variation).toFixed(1)}%</div>`;
+        }
+
+        function createGaugeSVG(value, max, label) {
+            const percentage = Math.min((value / max) * 100, 100);
+            const angle = (percentage / 100) * 180;
+            const radius = 45;
+            const circumference = Math.PI * radius;
+            const arcLength = (angle / 180) * circumference;
+
+            const x1 = 50;
+            const y1 = 90;
+            const x2 = 50 + radius * Math.cos((angle * Math.PI) / 180);
+            const y2 = 90 - radius * Math.sin((angle * Math.PI) / 180);
+
+            const largeArc = angle > 90 ? 1 : 0;
+
+            return `
+                <svg viewBox="0 0 100 100" class="gauge-svg">
+                    <path d="M 5 90 A 45 45 0 0 1 95 90" fill="none" stroke="#eaf0f6" stroke-width="8" stroke-linecap="round"/>
+                    <path d="M 5 90 A 45 45 0 0 1 ${x2} ${y2}" fill="none" stroke="#7fd1de" stroke-width="8" stroke-linecap="round"/>
+                    <text x="50" y="75" text-anchor="middle" font-size="12" fill="#475569">${label}</text>
+                </svg>
+            `;
+        }
+
+        function updateComparisonBadge() {
+            const badge = document.getElementById('comparisonBadge');
+            const select = document.getElementById('comparisonSelect');
+
+            if (currentComparison === 'sem') {
+                badge.textContent = '';
+                return;
+            }
+
+            const labels = {
+                'mes-anterior': 'vs. Mês Anterior',
+                'mesmo-mes-ano': 'vs. Ano Passado',
+                'trimestre-anterior': 'vs. Trimestre Anterior'
+            };
+
+            badge.textContent = labels[currentComparison] || '';
+        }
+
+        function renderDashboard() {
+            if (!dashboardData.meta) {
+                document.getElementById('content').innerHTML = '<div class="error">Erro ao carregar dados</div>';
+                return;
+            }
+
+            const meta = dashboardData.meta;
+            const prospeccion = dashboardData.prospeccion || {};
+            const bdr_data = dashboardData.bdr_expansao || {};
+            const lost = dashboardData.lost_reasons || [];
+            const deals = dashboardData.deals || [];
+            const forecasts = dashboardData.forecast || {};
+
+            const comparisonData = dashboardData.comparisons?.[currentComparison] || {};
+
+            let html = `
+                <!-- ROW 1: Visão de Metas + Prospecção CS -->
+                <div class="row two-col">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Visão de Metas</div>
+                        </div>
+                        <div class="metas-grid">
+                            <div class="meta-item">
+                                <div class="meta-label">Q1 2026</div>
+                                <div class="meta-value">${formatBRL(meta.q1_meta_mrr || 0)}</div>
+                                <div class="meta-row">
+                                    <div>
+                                        <div class="meta-subtext" style="margin-bottom: 4px;">Meta MRR</div>
+                                    </div>
+                                    <div>
+                                        <div class="meta-subtext">${meta.q1_opps || 0} opps</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Q2 2026</div>
+                                <div class="meta-value">${formatBRL(meta.q2_meta_mrr || 0)}</div>
+                                <div class="meta-row">
+                                    <div>
+                                        <div class="meta-subtext" style="margin-bottom: 4px;">Meta MRR</div>
+                                    </div>
+                                    <div>
+                                        <div class="meta-subtext">${meta.q2_opps || 0} opps</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">H1 Total</div>
+                                <div class="meta-value">${formatBRL((meta.q1_meta_mrr || 0) + (meta.q2_meta_mrr || 0))}</div>
+                                <div class="meta-row">
+                                    <div>
+                                        <div class="meta-subtext" style="margin-bottom: 4px;">Taxa Conv.</div>
+                                        <div style="font-size: 14px; font-weight: 600; color: #0091ae;">${meta.conversion_rate || 0}%</div>
+                                    </div>
+                                    <div>
+                                        <div class="meta-subtext" style="margin-bottom: 4px;">Ticket Médio</div>
+                                        <div style="font-size: 14px; font-weight: 600; color: #0091ae;">${formatBRL(meta.ticket_medio || 0)}</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Metas Período</div>
+                                <div style="font-size: 14px; color: #64748b; margin-bottom: 8px;">
+                                    <div style="margin-bottom: 6px;"><strong>Mensal:</strong> ${formatBRL(meta.meta_mensal || 0)}</div>
+                                    <div style="margin-bottom: 6px;"><strong>Semanal:</strong> ${formatBRL(meta.meta_semanal || 0)}</div>
+                                    <div><strong>Diária:</strong> ${formatBRL(meta.meta_diaria || 0)}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Prospecção CS</div>
+                        </div>
+                        ${prospeccion.table ? `
+                            <table>
+                                <thead>
+                                    <tr>
+                                        ${prospeccion.table[0] ? Object.keys(prospeccion.table[0]).map(k => `<th>${k}</th>`).join('') : ''}
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    ${prospeccion.table.map(row => `
+                                        <tr>
+                                            ${Object.values(row).map(v => `<td>${v}</td>`).join('')}
+                                        </tr>
+                                    `).join('')}
+                                </tbody>
+                            </table>
+                        ` : '<p style="color: #94a3b8;">Sem dados</p>'}
+                    </div>
+                </div>
+
+                <!-- ROW 2: Bar Charts -->
+                <div class="row three-col">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">RA Expansão</div>
+                        </div>
+                        <div class="chart-container">
+                            <div class="chart-bars">
+                                ${Object.entries(bdr_data.ra || {}).map(([bdr, value]) => {
+                                    const maxValue = Math.max(...Object.values(bdr_data.ra || {}), 1);
+                                    const height = (value / maxValue) * 150;
+                                    return `
+                                        <div class="bar-wrapper">
+                                            <div class="bar" style="height: ${height}px;" title="${value}"></div>
+                                            <div class="bar-value">${formatNumber(value)}</div>
+                                            <div class="bar-label">${bdr}</div>
+                                        </div>
+                                    `;
+                                }).join('')}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">RD Expansão</div>
+                        </div>
+                        <div class="chart-container">
+                            <div class="chart-bars">
+                                ${Object.entries(bdr_data.rd || {}).map(([bdr, value]) => {
+                                    const maxValue = Math.max(...Object.values(bdr_data.rd || {}), 1);
+                                    const height = (value / maxValue) * 150;
+                                    return `
+                                        <div class="bar-wrapper">
+                                            <div class="bar" style="height: ${height}px;" title="${value}"></div>
+                                            <div class="bar-value">${formatNumber(value)}</div>
+                                            <div class="bar-label">${bdr}</div>
+                                        </div>
+                                    `;
+                                }).join('')}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Opps Expansão</div>
+                        </div>
+                        <div class="chart-container">
+                            <div class="chart-bars">
+                                ${Object.entries(bdr_data.opps || {}).map(([bdr, value]) => {
+                                    const maxValue = Math.max(...Object.values(bdr_data.opps || {}), 1);
+                                    const height = (value / maxValue) * 150;
+                                    return `
+                                        <div class="bar-wrapper">
+                                            <div class="bar" style="height: ${height}px;" title="${value}"></div>
+                                            <div class="bar-value">${formatNumber(value)}</div>
+                                            <div class="bar-label">${bdr}</div>
+                                        </div>
+                                    `;
+                                }).join('')}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROW 3: KPI Numbers -->
+                <div class="row three-col">
+                    <div class="card">
+                        <div class="kpi-label">Nº Proposal Presentation Exp</div>
+                        <div class="kpi-number">${meta.proposal_presentations || 0}</div>
+                        ${currentComparison !== 'sem' && comparisonData.proposal ? createComparisonBadge(meta.proposal_presentations || 0, comparisonData.proposal) : ''}
+                    </div>
+                    <div class="card">
+                        <div class="kpi-label">Nº Negotiation Exp</div>
+                        <div class="kpi-number">${meta.negotiations || 0}</div>
+                        ${currentComparison !== 'sem' && comparisonData.negotiation ? createComparisonBadge(meta.negotiations || 0, comparisonData.negotiation) : ''}
+                    </div>
+                    <div class="card">
+                        <div class="kpi-label">Nº About to Close Exp</div>
+                        <div class="kpi-number">${meta.about_to_close || 0}</div>
+                        ${currentComparison !== 'sem' && comparisonData.aboutclose ? createComparisonBadge(meta.about_to_close || 0, comparisonData.aboutclose) : ''}
+                    </div>
+                </div>
+
+                <!-- ROW 4: Won + Gauges + Forecast -->
+                <div class="row four-col">
+                    <div class="card">
+                        <div class="kpi-label">Nº Won EXP</div>
+                        <div class="kpi-number">${meta.won || 0}</div>
+                        ${currentComparison !== 'sem' && comparisonData.won ? createComparisonBadge(meta.won || 0, comparisonData.won) : ''}
+                    </div>
+
+                    <div class="card gauge-container">
+                        <div class="card-header" style="width: 100%; margin-bottom: 12px;">
+                            <div class="card-title">Nº Opps Exp</div>
+                        </div>
+                        ${createGaugeSVG(meta.total_opps || 0, 100, `${meta.total_opps || 0} opps`)}
+                        <div class="gauge-value" style="margin-top: 8px;">${meta.total_opps || 0}</div>
+                    </div>
+
+                    <div class="card gauge-container">
+                        <div class="card-header" style="width: 100%; margin-bottom: 12px;">
+                            <div class="card-title">Nº MRR Won Exp</div>
+                        </div>
+                        ${createGaugeSVG(meta.mrr_won || 0, meta.q1_meta_mrr || 100, formatBRL(meta.mrr_won || 0))}
+                        <div class="gauge-value" style="margin-top: 8px; font-size: 20px;">${formatBRL(meta.mrr_won || 0)}</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" style="margin-bottom: 12px;">
+                            <div class="card-title">Classificação Forecast</div>
+                        </div>
+                        <div class="forecast-grid">
+                            <div class="forecast-item best-case">
+                                <div class="forecast-label">Best Case</div>
+                                <div class="forecast-count">${forecasts.best_case_count || 0}</div>
+                                <div class="forecast-value">${formatBRL(forecasts.best_case_value || 0)}</div>
+                            </div>
+                            <div class="forecast-item commit">
+                                <div class="forecast-label">Commit</div>
+                                <div class="forecast-count">${forecasts.commit_count || 0}</div>
+                                <div class="forecast-value">${formatBRL(forecasts.commit_value || 0)}</div>
+                            </div>
+                            <div class="forecast-item pipeline">
+                                <div class="forecast-label">Pipeline</div>
+                                <div class="forecast-count">${forecasts.pipeline_count || 0}</div>
+                                <div class="forecast-value">${formatBRL(forecasts.pipeline_value || 0)}</div>
+                            </div>
+                            <div class="forecast-item" style="border-left-color: #94a3b8;">
+                                <div class="forecast-label">Total</div>
+                                <div class="forecast-count">${(forecasts.best_case_count || 0) + (forecasts.commit_count || 0) + (forecasts.pipeline_count || 0)}</div>
+                                <div class="forecast-value">${formatBRL((forecasts.best_case_value || 0) + (forecasts.commit_value || 0) + (forecasts.pipeline_value || 0))}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROW 5: Lost Vendas -->
+                <div class="row full">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">[COM] Nº de lost Vendas Exp</div>
+                        </div>
+                        ${lost.length > 0 ? `
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Motivo da Perda</th>
+                                        <th>Quantidade</th>
+                                        <th>% do Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    ${lost.map(item => {
+                                        const total = lost.reduce((sum, l) => sum + (l.quantity || 0), 0);
+                                        const percentage = total > 0 ? ((item.quantity || 0) / total * 100).toFixed(1) : 0;
+                                        return `
+                                            <tr>
+                                                <td>${item.reason || ''}</td>
+                                                <td>${formatNumber(item.quantity || 0)}</td>
+                                                <td>${percentage}%</td>
+                                            </tr>
+                                        `;
+                                    }).join('')}
+                                </tbody>
+                            </table>
+                        ` : '<p style="color: #94a3b8;">Sem dados</p>'}
+                    </div>
+                </div>
+
+                <!-- ROW 6: Pipeline Ativo -->
+                <div class="row full">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Pipeline Ativo — Deals Expansão</div>
+                        </div>
+
+                        ${deals.length > 0 ? `
+                            <div class="funnel-container">
+                                ${['Meeting', 'Discovery', 'Tech Validation', 'Proposal', 'Negotiation', 'About to Close'].map(stage => {
+                                    const stageDeals = deals.filter(d => d.stage === stage);
+                                    const count = stageDeals.length;
+                                    const value = stageDeals.reduce((sum, d) => sum + (parseFloat(d.valor) || 0), 0);
+                                    const maxCount = Math.max(...['Meeting', 'Discovery', 'Tech Validation', 'Proposal', 'Negotiation', 'About to Close'].map(s => deals.filter(d => d.stage === s).length), 1);
+                                    const height = (count / maxCount) * 100;
+                                    return `
+                                        <div class="funnel-stage">
+                                            <div class="funnel-bar" style="height: ${height}px;"></div>
+                                            <div class="funnel-value">${count}</div>
+                                            <div class="funnel-label">${stage}</div>
+                                        </div>
+                                    `;
+                                }).join('')}
+                            </div>
+
+                            <table class="deals-table">
+                                <thead>
+                                    <tr>
+                                        <th>Deal</th>
+                                        <th>Stage</th>
+                                        <th>Valor (BRL)</th>
+                                        <th>Tipo</th>
+                                        <th>Forecast</th>
+                                        <th>Owner</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    ${deals.filter(d => !d.freeze).map(deal => {
+                                        const stageClasses = {
+                                            'Meeting': 'stage-meeting',
+                                            'Discovery': 'stage-discovery',
+                                            'Tech Validation': 'stage-tech',
+                                            'Proposal': 'stage-proposal',
+                                            'Negotiation': 'stage-negotiation',
+                                            'About to Close': 'stage-close'
+                                        };
+                                        const forecastClasses = {
+                                            'Pipeline': 'forecast-pipeline',
+                                            'Best case': 'forecast-best',
+                                            'Commit': 'forecast-commit'
+                                        };
+                                        return `
+                                            <tr>
+                                                <td><a href="${deal.hubspot_url || '#'}" class="deal-name-link" target="_blank">${deal.name || ''}</a></td>
+                                                <td><span class="stage-badge ${stageClasses[deal.stage] || ''}">${deal.stage || ''}</span></td>
+                                                <td>${formatBRL(parseFloat(deal.valor) || 0)}</td>
+                                                <td>${deal.tipo || ''}</td>
+                                                <td><span class="forecast-badge ${forecastClasses[deal.forecast] || ''}">${deal.forecast || ''}</span></td>
+                                                <td>${deal.owner || ''}</td>
+                                            </tr>
+                                        `;
+                                    }).join('')}
+                                </tbody>
+                            </table>
+
+                            ${deals.filter(d => d.freeze).length > 0 ? `
+                                <div class="freeze-section">
+                                    <div class="freeze-label">Deals Congelados</div>
+                                    <table class="deals-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Deal</th>
+                                                <th>Stage</th>
+                                                <th>Valor (BRL)</th>
+                                                <th>Tipo</th>
+                                                <th>Forecast</th>
+                                                <th>Owner</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            ${deals.filter(d => d.freeze).map(deal => {
+                                                const stageClasses = {
+                                                    'Meeting': 'stage-meeting',
+                                                    'Discovery': 'stage-discovery',
+                                                    'Tech Validation': 'stage-tech',
+                                                    'Proposal': 'stage-proposal',
+                                                    'Negotiation': 'stage-negotiation',
+                                                    'About to Close': 'stage-close'
+                                                };
+                                                const forecastClasses = {
+                                                    'Pipeline': 'forecast-pipeline',
+                                                    'Best case': 'forecast-best',
+                                                    'Commit': 'forecast-commit'
+                                                };
+                                                return `
+                                                    <tr>
+                                                        <td><a href="${deal.hubspot_url || '#'}" class="deal-name-link" target="_blank">${deal.name || ''}</a></td>
+                                                        <td><span class="stage-badge ${stageClasses[deal.stage] || ''}">${deal.stage || ''}</span></td>
+                                                        <td>${formatBRL(parseFloat(deal.valor) || 0)}</td>
+                                                        <td>${deal.tipo || ''}</td>
+                                                        <td><span class="forecast-badge ${forecastClasses[deal.forecast] || ''}">${deal.forecast || ''}</span></td>
+                                                        <td>${deal.owner || ''}</td>
+                                                    </tr>
+                                                `;
+                                            }).join('')}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            ` : ''}
+                        ` : '<p style="color: #94a3b8;">Sem dados de deals</p>'}
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('content').innerHTML = html;
+
+            // Update timestamp
+            document.getElementById('timestamp').textContent = formatDate(dashboardData.timestamp);
+
+            // Update comparison badge
+            updateComparisonBadge();
+        }
+
+        function loadData() {
+            fetch('data.json')
+                .then(response => {
+                    if (!response.ok) throw new Error('Erro ao carregar data.json');
+                    return response.json();
+                })
+                .then(data => {
+                    dashboardData = data;
+                    renderDashboard();
+                })
+                .catch(error => {
+                    console.error('Erro:', error);
+                    document.getElementById('content').innerHTML = `
+                        <div class="error">
+                            <strong>Erro ao carregar dados:</strong> ${error.message}
+                        </div>
+                    `;
+                });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadData();
+
+            // Comparison selector
+            document.getElementById('comparisonSelect').addEventListener('change', (e) => {
+                currentComparison = e.target.value;
+                renderDashboard();
+            });
+
+            // Period buttons
+            document.querySelectorAll('.period-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.period-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    // Aqui você pode adicionar lógica para carregar dados de diferentes períodos
+                });
+            });
+        });
+    </script>
+</body>
+</html>
