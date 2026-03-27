@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-26T14:00:00",
+  "timestamp": "2026-03-27T08:43:45",
   "meta": {
     "q1_meta_mrr": 49000,
     "q1_opps": 40,
@@ -17,100 +17,6 @@
     "total_opps": 18,
     "mrr_won": 282360
   },
-  "prospeccion": {
-    "table": [
-      {"Nome do ticket": "c0029 | ciarama", "(Contagem) Tickets": "1"}
-    ]
-  },
-  "bdr_expansao": {
-    "ra": {
-      "Márcia Oliveira": 8,
-      "Vinícius Ramos": 6,
-      "Rodrigo Carvalho": 4,
-      "Cristiane Vieira": 3,
-      "Adolfo Vasconcelos": 2
-    },
-    "rd": {
-      "Márcia Oliveira": 7,
-      "Rodrigo Carvalho": 4,
-      "Vinícius Ramos": 3,
-      "Cristiane Vieira": 3,
-      "Adolfo Vasconcelos": 2
-    },
-    "opps": {
-      "Márcia Oliveira": 6,
-      "Rodrigo Carvalho": 3,
-      "Vinícius Ramos": 1,
-      "Cristiane Vieira": 1
-    }
-  },
-  "forecast": {
-    "best_case_count": 2,
-    "best_case_value": 19667.55,
-    "commit_count": 1,
-    "commit_value": 2082.31,
-    "pipeline_count": 8,
-    "pipeline_value": 46398
-  },
-  "lost_reasons": [
-    {"reason": "Sem oportunidade de expansão", "quantity": 17},
-    {"reason": "Orçamento não aprovado", "quantity": 14},
-    {"reason": "Mudança de prioridade do projeto", "quantity": 10},
-    {"reason": "Fora do escopo Dattos", "quantity": 3},
-    {"reason": "Tentativas de contato esgotadas", "quantity": 3},
-    {"reason": "(Nenhum valor)", "quantity": 2},
-    {"reason": "Carência de feature", "quantity": 2},
-    {"reason": "Lead não trabalhado", "quantity": 2}
-  ],
-  "deals": [
-    {"name": "Volkswagen - Renovação + Expansão", "stage": "About to Close", "valor": 2082.31, "tipo": "Upsell", "forecast": "Commit", "owner": "Vinicyus Fernando", "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/43331287391", "freeze": false},
-    {"name": "PUC RS", "stage": "Negotiation", "valor": 4398, "tipo": "Cross-sell", "forecast": "Pipeline", "owner": "Vinicyus Fernando", "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/58054745348", "freeze": false},
-    {"name": "Normaq - Contábil", "stage": "Negotiation", "valor": 5484, "tipo": "Cross-sell", "forecast": "Best case", "owner": "Vinicyus Fernando", "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/57610386828", "freeze": false},
-    {"name": "Mercedes Caminhões - Controladoria", "stage": "Proposal", "valor": 14183.55, "tipo": "Cross-sell", "forecast": "Best case", "owner": "Vinicyus Fernando", "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/43319723184", "freeze": false},
-    {"name": "Natura - Ativo Imobilizado", "stage": "Tech Validation", "valor": 1000, "tipo": "Cross-sell", "forecast": "Pipeline", "owner": "Vinicyus Fernando", "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/57021651096", "freeze": false},
-    {"name": "Natura - Custos México", "stage": "Tech Validation", "valor": 10000, "tipo": "Cross-sell", "forecast": "Pipeline", "owner": "Vinicyus Fernando", "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/56981908840", "freeze": false},
-    {"name": "Natura - Custos Brasil", "stage": "Tech Validation", "valor": 5000, "tipo": "Cross-sell", "forecast": "Pipeline", "owner": "Vinicyus Fernando", "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/57021581904", "freeze": false},
-    {"name": "Mercedes Contabilidade", "stage": "Tech Validation", "valor": 13000, "tipo": "Cross-sell", "forecast": "Pipeline", "owner": "Vinicyus Fernando", "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/43288812936", "freeze": false},
-    {"name": "Rede Américas", "stage": "Tech Validation", "valor": 5000, "tipo": "Cross-sell", "forecast": "", "owner": "Vinicyus Fernando", "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/54208673908", "freeze": false},
-    {"name": "Motiva - Vertical Rodovias", "stage": "Discovery", "valor": 30000, "tipo": "Upsell", "forecast": "", "owner": "Vinicyus Fernando", "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/58204901167", "freeze": false},
-    {"name": "iFood - Contabilidade", "stage": "Discovery", "valor": 5000, "tipo": "Upsell", "forecast": "", "owner": "Vinicyus Fernando", "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/58169213795", "freeze": false},
-    {"name": "Natura - RH", "stage": "Discovery", "valor": 5000, "tipo": "Cross-sell", "forecast": "", "owner": "Vinicyus Fernando", "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/58025508357", "freeze": false},
-    {"name": "Acelen - Renováveis", "stage": "Discovery", "valor": 13000, "tipo": "Cross-sell", "forecast": "", "owner": "Vinicyus Fernando", "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/57019343515", "freeze": false},
-    {"name": "Natura - Contabilidade", "stage": "Discovery", "valor": 5000, "tipo": "Cross-sell", "forecast": "", "owner": "Vinicyus Fernando", "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/57019085193", "freeze": false},
-    {"name": "Assurant - CP e CR", "stage": "Discovery", "valor": 3500, "tipo": "Cross-sell", "forecast": "", "owner": "Vinicyus Fernando", "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/55396695374", "freeze": false},
-    {"name": "Banco BS2 - BackOffice Câmbio", "stage": "Discovery", "valor": 2250, "tipo": "Upsell", "forecast": "", "owner": "Vinicyus Fernando", "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/55307890519", "freeze": false},
-    {"name": "Positivo S+ - Expansão", "stage": "Discovery", "valor": 7000, "tipo": "Cross-sell", "forecast": "", "owner": "Vinicyus Fernando", "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/50524340797", "freeze": false},
-    {"name": "Natura - Estoques", "stage": "Meeting", "valor": 5000, "tipo": "Cross-sell", "forecast": "", "owner": "Vinicyus Fernando", "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/57019085648", "freeze": false},
-    {"name": "C0177 | Comercial Zaffari", "stage": "Meeting", "valor": 12000, "tipo": "Cross-sell", "forecast": "", "owner": "Vinicyus Fernando", "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/56091176268", "freeze": false},
-    {"name": "C0144 | Protege Cash", "stage": "Meeting", "valor": 12000, "tipo": "Cross-sell", "forecast": "", "owner": "Vinicyus Fernando", "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/55688681487", "freeze": false},
-    {"name": "C0075 | C&A - Recon", "stage": "Meeting", "valor": 13000, "tipo": "Upsell", "forecast": "Pipeline", "owner": "Vinicyus Fernando", "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/51340090131", "freeze": false},
-    {"name": "Eternit", "stage": "Freeze", "valor": 4022, "tipo": "", "forecast": "", "owner": "", "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/50770240893", "freeze": true},
-    {"name": "ICBC", "stage": "Freeze", "valor": 5278, "tipo": "", "forecast": "", "owner": "", "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/36823028374", "freeze": true},
-    {"name": "Columbia", "stage": "Freeze", "valor": 0, "tipo": "", "forecast": "", "owner": "", "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/45197730939", "freeze": true},
-    {"name": "VWFS", "stage": "Freeze", "valor": 0, "tipo": "", "forecast": "", "owner": "", "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/43743420687", "freeze": true},
-    {"name": "Bayer", "stage": "Freeze", "valor": 0, "tipo": "", "forecast": "", "owner": "", "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/43419792520", "freeze": true}
-  ],
-  "comparisons": {
-    "mes-anterior": {
-      "label": "Fev/2026",
-      "proposal": 34,
-      "negotiation": 29,
-      "aboutclose": 21,
-      "won": 10
-    },
-    "mesmo-mes-ano": {
-      "label": "Mar/2025",
-      "proposal": 20,
-      "negotiation": 15,
-      "aboutclose": 12,
-      "won": 2
-    },
-    "trimestre-anterior": {
-      "label": "Q4/2025",
-      "proposal": 55,
-      "negotiation": 42,
-      "aboutclose": 35,
-      "won": 5
-    }
+  "prospeccion": {}
   }
 }
