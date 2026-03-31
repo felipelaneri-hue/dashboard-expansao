@@ -1,22 +1,19 @@
 {
-  "timestamp": "2026-03-27T08:43:45",
+  "timestamp": "2026-03-31T13:23:56Z",
   "meta": {
     "q1_meta_mrr": 49000,
     "q1_opps": 40,
     "q2_meta_mrr": 72500,
     "q2_opps": 60,
-    "conversion_rate": 25,
-    "ticket_medio": 5000,
+    "conversion_rate": 13.8,
+    "ticket_medio": 9353.22,
     "meta_mensal": 16333,
     "meta_semanal": 4083,
     "meta_diaria": 544,
-    "proposal_presentations": 76,
-    "negotiations": 58,
-    "about_to_close": 47,
-    "won": 3,
-    "total_opps": 18,
-    "mrr_won": 282360
+    "proposal_presentations": 3,
+    "negotiations": 2,
+    "about_to_close": 1,
+    "won": 4,
+    "total_opps": 25,
+    "mrr_won": 16877.51
   },
-  "prospeccion": {}
-  }
-}
