@@ -17,3 +17,515 @@
     "total_opps": 25,
     "mrr_won": 16877.51
   },
+  "prospeccion": {
+    "table": [
+      {
+        "Nome do ticket": "Vinicyus Magalhães",
+        "(Contagem) Tickets": "20"
+      },
+      {
+        "Nome do ticket": "Júlia Beaucamp",
+        "(Contagem) Tickets": "19"
+      },
+      {
+        "Nome do ticket": "Daisa Barbosa",
+        "(Contagem) Tickets": "15"
+      },
+      {
+        "Nome do ticket": "Paschoal De Lascio",
+        "(Contagem) Tickets": "11"
+      },
+      {
+        "Nome do ticket": "Ingrid Camargo",
+        "(Contagem) Tickets": "7"
+      },
+      {
+        "Nome do ticket": "Anna Kauling",
+        "(Contagem) Tickets": "5"
+      },
+      {
+        "Nome do ticket": "Everton Rogatti",
+        "(Contagem) Tickets": "2"
+      },
+      {
+        "Nome do ticket": "Júlia Fernandes",
+        "(Contagem) Tickets": "1"
+      },
+      {
+        "Nome do ticket": "Mariana Guimarães",
+        "(Contagem) Tickets": "1"
+      },
+      {
+        "Nome do ticket": "Cristiane Vieira",
+        "(Contagem) Tickets": "1"
+      },
+      {
+        "Nome do ticket": "Maitê Lima",
+        "(Contagem) Tickets": "1"
+      },
+      {
+        "Nome do ticket": "Alexandre Vieira",
+        "(Contagem) Tickets": "1"
+      }
+    ]
+  },
+  "bdr_expansao": {
+    "ra": {
+      "Júlia Beaucamp": 10,
+      "Vinicyus Magalhães": 7,
+      "Júlia Fernandes": 1,
+      "Daisa Barbosa": 1,
+      "Paschoal De Lascio": 3,
+      "Mariana Guimarães": 1,
+      "Ingrid Camargo": 2,
+      "Cristiane Vieira": 1,
+      "Anna Kauling": 4,
+      "Maitê Lima": 1,
+      "Everton Rogatti": 1
+    },
+    "rd": {
+      "Daisa Barbosa": 14,
+      "Júlia Beaucamp": 9,
+      "Vinicyus Magalhães": 13,
+      "Ingrid Camargo": 5,
+      "Paschoal De Lascio": 8,
+      "Everton Rogatti": 1,
+      "Anna Kauling": 1,
+      "Alexandre Vieira": 1
+    },
+    "opps": {
+      "Vinicyus Magalhães": 14,
+      "Paschoal De Lascio": 14,
+      "Daisa Barbosa": 17,
+      "Ingrid Camargo": 19,
+      "Júlia Beaucamp": 5
+    }
+  },
+  "forecast": {
+    "best_case_count": 2,
+    "best_case_value": 19667.55,
+    "commit_count": 0,
+    "commit_value": 0.0,
+    "pipeline_count": 23,
+    "pipeline_value": 176750.0
+  },
+  "lost_reasons": [
+    {
+      "reason": "Mudança de prioridade do projeto",
+      "quantity": 39
+    },
+    {
+      "reason": "Tentativas de contato esgotadas",
+      "quantity": 34
+    },
+    {
+      "reason": "Não é SAL",
+      "quantity": 20
+    },
+    {
+      "reason": "Apenas pesquisando",
+      "quantity": 14
+    },
+    {
+      "reason": "Orçamento não aprovado",
+      "quantity": 14
+    },
+    {
+      "reason": "Perda pra concorrência",
+      "quantity": 8
+    },
+    {
+      "reason": "Fora do ICP",
+      "quantity": 5
+    },
+    {
+      "reason": "Limite de no-show",
+      "quantity": 5
+    },
+    {
+      "reason": "Fora do escopo Dattos",
+      "quantity": 4
+    },
+    {
+      "reason": "Carência de feature",
+      "quantity": 3
+    },
+    {
+      "reason": "Sem interesse na solução",
+      "quantity": 2
+    },
+    {
+      "reason": "Impedimentos Burocráticos",
+      "quantity": 2
+    },
+    {
+      "reason": "Sem oportunidade de expansão",
+      "quantity": 2
+    }
+  ],
+  "deals": [
+    {
+      "name": "C0206 | Volkswagen Financial ( Reforma tributária)",
+      "stage": "Meeting",
+      "valor": 15000.0,
+      "tipo": "-",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Magalhães",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/58479340332",
+      "freeze": false
+    },
+    {
+      "name": "Volkswagen Financial ( NF Frota)",
+      "stage": "Meeting",
+      "valor": 15000.0,
+      "tipo": "-",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Magalhães",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/58404264110",
+      "freeze": false
+    },
+    {
+      "name": "Motiva - Vertical Rodovias",
+      "stage": "Discovery",
+      "valor": 30000.0,
+      "tipo": "Upsell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Magalhães",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/58204901167",
+      "freeze": false
+    },
+    {
+      "name": "iFood - Contabilidade",
+      "stage": "Discovery",
+      "valor": 5000.0,
+      "tipo": "Upsell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Magalhães",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/58169213795",
+      "freeze": false
+    },
+    {
+      "name": "Natura - RH",
+      "stage": "Discovery",
+      "valor": 5000.0,
+      "tipo": "Cross-sell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Magalhães",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/58025508357",
+      "freeze": false
+    },
+    {
+      "name": "PUC RS",
+      "stage": "About to Close",
+      "valor": 0.0,
+      "tipo": "Cross-sell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Magalhães",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/58054745348",
+      "freeze": false
+    },
+    {
+      "name": "C0156 | Normaq - Contábil",
+      "stage": "Negotiation",
+      "valor": 5484.0,
+      "tipo": "Cross-sell",
+      "forecast": "Best case",
+      "owner": "Vinicyus Magalhães",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/57610386828",
+      "freeze": false
+    },
+    {
+      "name": "Volkswagen Automotiva - Contabilidade",
+      "stage": "Discovery",
+      "valor": 0.0,
+      "tipo": "Cross-sell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Magalhães",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/57506791481",
+      "freeze": false
+    },
+    {
+      "name": "Acelen - Renováveis",
+      "stage": "Discovery",
+      "valor": 13000.0,
+      "tipo": "Cross-sell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Magalhães",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/57019343515",
+      "freeze": false
+    },
+    {
+      "name": "Natura - Ativo Imobilizado",
+      "stage": "Tech Validation",
+      "valor": 1000.0,
+      "tipo": "Cross-sell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Magalhães",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/57021651096",
+      "freeze": false
+    },
+    {
+      "name": "Natura - Estoques",
+      "stage": "Meeting",
+      "valor": 5000.0,
+      "tipo": "Cross-sell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Magalhães",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/57019085648",
+      "freeze": false
+    },
+    {
+      "name": "Natura - Contabilidade",
+      "stage": "Discovery",
+      "valor": 5000.0,
+      "tipo": "Cross-sell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Magalhães",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/57019085193",
+      "freeze": false
+    },
+    {
+      "name": "Natura - Custos (México)",
+      "stage": "Tech Validation",
+      "valor": 10000.0,
+      "tipo": "Cross-sell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Magalhães",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/56981908840",
+      "freeze": false
+    },
+    {
+      "name": "Natura - Custos Brasil",
+      "stage": "Tech Validation",
+      "valor": 5000.0,
+      "tipo": "Cross-sell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Magalhães",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/57021581904",
+      "freeze": false
+    },
+    {
+      "name": "Natura - Governança CSC",
+      "stage": "Discovery",
+      "valor": 0.0,
+      "tipo": "Cross-sell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Magalhães",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/56981901998",
+      "freeze": false
+    },
+    {
+      "name": "Natura - Contas a Receber",
+      "stage": "Discovery",
+      "valor": 0.0,
+      "tipo": "Cross-sell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Magalhães",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/56981738292",
+      "freeze": false
+    },
+    {
+      "name": "C0177  | Comercial Zaffari - Financeiro e Tesouraria",
+      "stage": "Meeting",
+      "valor": 12000.0,
+      "tipo": "Cross-sell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Magalhães",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/56091176268",
+      "freeze": false
+    },
+    {
+      "name": "C0144 | Protege Cash - Expansão",
+      "stage": "Meeting",
+      "valor": 12000.0,
+      "tipo": "Cross-sell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Magalhães",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/55688681487",
+      "freeze": false
+    },
+    {
+      "name": "Assurant - CP e CR",
+      "stage": "Discovery",
+      "valor": 3500.0,
+      "tipo": "Cross-sell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Magalhães",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/55396695374",
+      "freeze": false
+    },
+    {
+      "name": "C0145 | Banco BS2 ( BackOffice Câmbio)",
+      "stage": "Discovery",
+      "valor": 2250.0,
+      "tipo": "Upsell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Magalhães",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/55307890519",
+      "freeze": false
+    },
+    {
+      "name": "Rede Américas",
+      "stage": "Tech Validation",
+      "valor": 5000.0,
+      "tipo": "Cross-sell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Magalhães",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/54208673908",
+      "freeze": false
+    },
+    {
+      "name": "C0075 | C&A - Recon",
+      "stage": "Meeting",
+      "valor": 13000.0,
+      "tipo": "Upsell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Magalhães",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/51340090131",
+      "freeze": false
+    },
+    {
+      "name": "Eternit - Fiscal",
+      "stage": "Freeze",
+      "valor": 4022.15,
+      "tipo": "Cross-sell",
+      "forecast": "Pipeline",
+      "owner": "Paschoal De Lascio",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/50770240893",
+      "freeze": true
+    },
+    {
+      "name": "Positivo S+ - Expansão",
+      "stage": "Discovery",
+      "valor": 7000.0,
+      "tipo": "Cross-sell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Magalhães",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/50524340797",
+      "freeze": false
+    },
+    {
+      "name": "Columbia - Financeiro",
+      "stage": "Freeze",
+      "valor": 0.0,
+      "tipo": "Cross-sell",
+      "forecast": "Pipeline",
+      "owner": "Vinicius Ramos",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/45197730939",
+      "freeze": true
+    },
+    {
+      "name": "VWFS - Controladoria",
+      "stage": "Freeze",
+      "valor": 0.0,
+      "tipo": "Cross-sell",
+      "forecast": "Pipeline",
+      "owner": "Cristiane Vieira",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/43743420687",
+      "freeze": true
+    },
+    {
+      "name": "Bayer - Migração",
+      "stage": "Freeze",
+      "valor": 0.0,
+      "tipo": "Upsell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Magalhães",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/43419792520",
+      "freeze": true
+    },
+    {
+      "name": "Mercedes - Caminhões -  Controladoria de Projetos de Produto",
+      "stage": "Proposal",
+      "valor": 14183.55,
+      "tipo": "Cross-sell",
+      "forecast": "Best case",
+      "owner": "Vinicyus Magalhães",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/43319723184",
+      "freeze": false
+    },
+    {
+      "name": "Mercedes - Caminhões - Contabilidade",
+      "stage": "Tech Validation",
+      "valor": 13000.0,
+      "tipo": "Cross-sell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Magalhães",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/43288812936",
+      "freeze": false
+    },
+    {
+      "name": "ICBC - Expansão",
+      "stage": "Freeze",
+      "valor": 5277.6,
+      "tipo": "Upsell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Magalhães",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/36823028374",
+      "freeze": true
+    },
+    {
+      "name": "Aché Laboratórios - Projeto Saphira",
+      "stage": "Won",
+      "valor": 11453.2,
+      "tipo": "Cross-sell",
+      "forecast": "Commit",
+      "owner": "Vinicyus Magalhães",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/53897847475",
+      "freeze": false
+    },
+    {
+      "name": "Krypton - Volumetria",
+      "stage": "Won",
+      "valor": 3342.0,
+      "tipo": "Upsell",
+      "forecast": "Commit",
+      "owner": "Vinicius Ramos",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/51829955894",
+      "freeze": false
+    },
+    {
+      "name": "Volkswagen - Renovação + Expansão",
+      "stage": "Won",
+      "valor": 2082.31,
+      "tipo": "Upsell",
+      "forecast": "Commit",
+      "owner": "Vinicyus Magalhães",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/43331287391",
+      "freeze": false
+    },
+    {
+      "name": "CCR",
+      "stage": "Won",
+      "valor": 0.0,
+      "tipo": "Migração",
+      "forecast": "Commit",
+      "owner": "Vinicyus Magalhães",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/33182971674",
+      "freeze": false
+    }
+  ],
+  "comparisons": {
+    "mes-anterior": {
+      "label": "Fev/2026",
+      "proposal": 0,
+      "negotiation": 0,
+      "aboutclose": 0,
+      "won": 1
+    },
+    "mesmo-mes-ano": {
+      "label": "Mar/2025",
+      "proposal": 0,
+      "negotiation": 0,
+      "aboutclose": 0,
+      "won": 1
+    },
+    "trimestre-anterior": {
+      "label": "Q4/2025",
+      "proposal": 0,
+      "negotiation": 0,
+      "aboutclose": 0,
+      "won": 6
+    }
+  }
+}
