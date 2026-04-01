@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-04-01T13:11:12.000Z",
+  "timestamp": "2026-04-01T18:09:03.966928+00:00",
   "meta": {
     "q1_meta_mrr": 49000,
     "q1_opps": 40,
     "q2_meta_mrr": 72500,
     "q2_opps": 60,
-    "conversion_rate": 0.286,
-    "ticket_medio": 8598.76,
+    "conversion_rate": 0.2857,
+    "ticket_medio": 8478.02,
     "meta_mensal": 16333,
     "meta_semanal": 4083,
     "meta_diaria": 544,
@@ -14,35 +14,47 @@
     "negotiations": 3,
     "about_to_close": 2,
     "won": 4,
-    "total_opps": 25,
+    "total_opps": 20,
     "mrr_won": 16877.51
   },
   "prospeccion": {
     "table": [
       {
-        "Nome do ticket": "Vinicyus Magalhães",
-        "(Contagem) Tickets": "16"
+        "Nome do ticket": "Vinicyus Fernando",
+        "(Contagem) Tickets": "27"
+      },
+      {
+        "Nome do ticket": "Paschoal De Lascio",
+        "(Contagem) Tickets": "1"
+      },
+      {
+        "Nome do ticket": "Vinicius Ramos",
+        "(Contagem) Tickets": "1"
+      },
+      {
+        "Nome do ticket": "Cristiane Vieira",
+        "(Contagem) Tickets": "1"
       }
     ]
   },
   "bdr_expansao": {
     "ra": {
-      "Vinicyus Magalhães": 6
+      "Vinicyus Fernando": 5
     },
     "rd": {
-      "Vinicyus Magalhães": 10
+      "Vinicyus Fernando": 20
     },
     "opps": {
-      "Vinicyus Magalhães": 9
+      "Vinicyus Fernando": 4
     }
   },
   "forecast": {
-    "best_case_count": 1,
-    "best_case_value": 14183.55,
-    "commit_count": 2,
-    "commit_value": 5755.22,
-    "pipeline_count": 8,
-    "pipeline_value": 47484.0
+    "best_case_count": 6,
+    "best_case_value": 48183.55,
+    "commit_count": 3,
+    "commit_value": 11239.22,
+    "pipeline_count": 21,
+    "pipeline_value": 144049.75
   },
   "lost_reasons": [
     {
@@ -76,22 +88,12 @@
   ],
   "deals": [
     {
-      "name": "Puc-RS (Contas a Receber)",
-      "stage": "About to Close",
-      "valor": 1151.04,
-      "tipo": "Cross-sell",
-      "forecast": "Commit",
-      "owner": "Vinicyus Magalhães",
-      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/58630558115",
-      "freeze": false
-    },
-    {
       "name": "C0206 | Volkswagen Financial ( Reforma tributária)",
       "stage": "Meeting",
       "valor": 15000.0,
-      "tipo": "",
-      "forecast": "",
-      "owner": "Vinicyus Magalhães",
+      "tipo": "Cross-sell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Fernando",
       "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/58479340332",
       "freeze": false
     },
@@ -99,140 +101,20 @@
       "name": "Volkswagen Financial ( NF Frota)",
       "stage": "Meeting",
       "valor": 15000.0,
-      "tipo": "",
-      "forecast": "",
-      "owner": "Vinicyus Magalhães",
+      "tipo": "Cross-sell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Fernando",
       "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/58404264110",
       "freeze": false
     },
     {
-      "name": "Motiva - Vertical Rodovias",
-      "stage": "Discovery",
-      "valor": 30000.0,
-      "tipo": "Upsell",
-      "forecast": "",
-      "owner": "Vinicyus Magalhães",
-      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/58204901167",
-      "freeze": false
-    },
-    {
-      "name": "iFood - Contabilidade",
-      "stage": "Discovery",
-      "valor": 5000.0,
-      "tipo": "Upsell",
-      "forecast": "",
-      "owner": "Vinicyus Magalhães",
-      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/58169213795",
-      "freeze": false
-    },
-    {
-      "name": "Natura - RH",
-      "stage": "Discovery",
-      "valor": 5000.0,
-      "tipo": "Cross-sell",
-      "forecast": "",
-      "owner": "Vinicyus Magalhães",
-      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/58025508357",
-      "freeze": false
-    },
-    {
-      "name": "PUC RS (Contabilidade + RH)",
-      "stage": "About to Close",
-      "valor": 4604.18,
-      "tipo": "Upsell",
-      "forecast": "Commit",
-      "owner": "Vinicyus Magalhães",
-      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/58054745348",
-      "freeze": false
-    },
-    {
-      "name": "C0156 | Normaq - Contábil",
-      "stage": "Negotiation",
-      "valor": 5484.0,
-      "tipo": "Cross-sell",
-      "forecast": "Pipeline",
-      "owner": "Vinicyus Magalhães",
-      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/57610386828",
-      "freeze": false
-    },
-    {
-      "name": "Volkswagen Automotiva - Contabilidade",
-      "stage": "Discovery",
-      "valor": 0.0,
-      "tipo": "Cross-sell",
-      "forecast": "",
-      "owner": "Vinicyus Magalhães",
-      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/57506791481",
-      "freeze": false
-    },
-    {
-      "name": "Natura - Ativo Imobilizado",
-      "stage": "Tech Validation",
-      "valor": 1000.0,
-      "tipo": "Cross-sell",
-      "forecast": "Pipeline",
-      "owner": "Vinicyus Magalhães",
-      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/57021651096",
-      "freeze": false
-    },
-    {
-      "name": "Natura - Estoques",
+      "name": "C0075 | C&A - Recon",
       "stage": "Meeting",
-      "valor": 5000.0,
-      "tipo": "Cross-sell",
-      "forecast": "",
-      "owner": "Vinicyus Magalhães",
-      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/57019085648",
-      "freeze": false
-    },
-    {
-      "name": "Natura - Contabilidade",
-      "stage": "Discovery",
-      "valor": 5000.0,
-      "tipo": "Cross-sell",
-      "forecast": "",
-      "owner": "Vinicyus Magalhães",
-      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/57019085193",
-      "freeze": false
-    },
-    {
-      "name": "Natura - Custos (México)",
-      "stage": "Tech Validation",
-      "valor": 10000.0,
+      "valor": 13000.0,
       "tipo": "Cross-sell",
       "forecast": "Pipeline",
-      "owner": "Vinicyus Magalhães",
-      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/56981908840",
-      "freeze": false
-    },
-    {
-      "name": "Natura - Custos Brasil",
-      "stage": "Tech Validation",
-      "valor": 5000.0,
-      "tipo": "Cross-sell",
-      "forecast": "Pipeline",
-      "owner": "Vinicyus Magalhães",
-      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/57021581904",
-      "freeze": false
-    },
-    {
-      "name": "Natura - Governança CSC",
-      "stage": "Discovery",
-      "valor": 0.0,
-      "tipo": "Cross-sell",
-      "forecast": "",
-      "owner": "Vinicyus Magalhães",
-      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/56981901998",
-      "freeze": false
-    },
-    {
-      "name": "Natura - Contas a Receber",
-      "stage": "Discovery",
-      "valor": 0.0,
-      "tipo": "Cross-sell",
-      "forecast": "",
-      "owner": "Vinicyus Magalhães",
-      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/56981738292",
+      "owner": "Vinicyus Fernando",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/51340090131",
       "freeze": false
     },
     {
@@ -240,8 +122,8 @@
       "stage": "Meeting",
       "valor": 12000.0,
       "tipo": "Cross-sell",
-      "forecast": "",
-      "owner": "Vinicyus Magalhães",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Fernando",
       "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/56091176268",
       "freeze": false
     },
@@ -250,9 +132,69 @@
       "stage": "Meeting",
       "valor": 12000.0,
       "tipo": "Cross-sell",
-      "forecast": "",
-      "owner": "Vinicyus Magalhães",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Fernando",
       "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/55688681487",
+      "freeze": false
+    },
+    {
+      "name": "Motiva - Vertical Rodovias",
+      "stage": "Discovery",
+      "valor": 30000.0,
+      "tipo": "Cross-sell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Fernando",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/58204901167",
+      "freeze": false
+    },
+    {
+      "name": "[Loop 2] Argo Energia",
+      "stage": "Discovery",
+      "valor": 10000.0,
+      "tipo": "Cross-sell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Fernando",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/58164393989",
+      "freeze": false
+    },
+    {
+      "name": "Positivo S+ - Expansão",
+      "stage": "Discovery",
+      "valor": 7000.0,
+      "tipo": "Cross-sell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Fernando",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/50524340797",
+      "freeze": false
+    },
+    {
+      "name": "iFood - Contabilidade",
+      "stage": "Discovery",
+      "valor": 5000.0,
+      "tipo": "Cross-sell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Fernando",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/58169213795",
+      "freeze": false
+    },
+    {
+      "name": "Natura - RH",
+      "stage": "Discovery",
+      "valor": 5000.0,
+      "tipo": "Cross-sell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Fernando",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/58025508357",
+      "freeze": false
+    },
+    {
+      "name": "Natura - Contabilidade",
+      "stage": "Discovery",
+      "valor": 5000.0,
+      "tipo": "Cross-sell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Fernando",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/57019085193",
       "freeze": false
     },
     {
@@ -260,8 +202,8 @@
       "stage": "Discovery",
       "valor": 3500.0,
       "tipo": "Cross-sell",
-      "forecast": "",
-      "owner": "Vinicyus Magalhães",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Fernando",
       "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/55396695374",
       "freeze": false
     },
@@ -269,10 +211,70 @@
       "name": "C0145 | Banco BS2 ( BackOffice Câmbio)",
       "stage": "Discovery",
       "valor": 2250.0,
-      "tipo": "Upsell",
-      "forecast": "",
-      "owner": "Vinicyus Magalhães",
+      "tipo": "Cross-sell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Fernando",
       "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/55307890519",
+      "freeze": false
+    },
+    {
+      "name": "Volkswagen Automotiva - Contabilidade",
+      "stage": "Discovery",
+      "valor": 0.0,
+      "tipo": "Cross-sell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Fernando",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/57506791481",
+      "freeze": false
+    },
+    {
+      "name": "Natura - Governança CSC",
+      "stage": "Discovery",
+      "valor": 0.0,
+      "tipo": "Cross-sell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Fernando",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/56981901998",
+      "freeze": false
+    },
+    {
+      "name": "Natura - Contas a Receber",
+      "stage": "Discovery",
+      "valor": 0.0,
+      "tipo": "Cross-sell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Fernando",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/56981738292",
+      "freeze": false
+    },
+    {
+      "name": "Mercedes - Caminhões - Contabilidade",
+      "stage": "Tech Validation",
+      "valor": 13000.0,
+      "tipo": "Cross-sell",
+      "forecast": "Best case",
+      "owner": "Vinicyus Fernando",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/43288812936",
+      "freeze": false
+    },
+    {
+      "name": "Natura - Custos (México)",
+      "stage": "Tech Validation",
+      "valor": 10000.0,
+      "tipo": "Cross-sell",
+      "forecast": "Best case",
+      "owner": "Vinicyus Fernando",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/56981908840",
+      "freeze": false
+    },
+    {
+      "name": "Natura - Custos Brasil",
+      "stage": "Tech Validation",
+      "valor": 5000.0,
+      "tipo": "Cross-sell",
+      "forecast": "Best case",
+      "owner": "Vinicyus Fernando",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/57021581904",
       "freeze": false
     },
     {
@@ -280,40 +282,80 @@
       "stage": "Tech Validation",
       "valor": 5000.0,
       "tipo": "Cross-sell",
-      "forecast": "",
-      "owner": "Vinicyus Magalhães",
+      "forecast": "Best case",
+      "owner": "Vinicyus Fernando",
       "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/54208673908",
       "freeze": false
     },
     {
-      "name": "C0075 | C&A - Recon",
-      "stage": "Meeting",
-      "valor": 13000.0,
-      "tipo": "Upsell",
-      "forecast": "Pipeline",
-      "owner": "Vinicyus Magalhães",
-      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/51340090131",
+      "name": "Natura - Ativo Imobilizado",
+      "stage": "Tech Validation",
+      "valor": 1000.0,
+      "tipo": "Cross-sell",
+      "forecast": "Best case",
+      "owner": "Vinicyus Fernando",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/57021651096",
       "freeze": false
+    },
+    {
+      "name": "Mercedes - Caminhões -  Controladoria de Projetos de Produto",
+      "stage": "Proposal",
+      "valor": 14183.55,
+      "tipo": "Cross-sell",
+      "forecast": "Best case",
+      "owner": "Vinicyus Fernando",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/43319723184",
+      "freeze": false
+    },
+    {
+      "name": "C0156 | Normaq - Contábil",
+      "stage": "Negotiation",
+      "valor": 5484.0,
+      "tipo": "Cross-sell",
+      "forecast": "Commit",
+      "owner": "Vinicyus Fernando",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/57610386828",
+      "freeze": false
+    },
+    {
+      "name": "PUC RS (Contabilidade + RH)",
+      "stage": "About to Close",
+      "valor": 4604.18,
+      "tipo": "Cross-sell",
+      "forecast": "Commit",
+      "owner": "Vinicyus Fernando",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/58054745348",
+      "freeze": false
+    },
+    {
+      "name": "Puc-RS (Contas a Receber)",
+      "stage": "About to Close",
+      "valor": 1151.04,
+      "tipo": "Cross-sell",
+      "forecast": "Commit",
+      "owner": "Vinicyus Fernando",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/58630558115",
+      "freeze": false
+    },
+    {
+      "name": "ICBC - Expansão",
+      "stage": "Freeze",
+      "valor": 5277.6,
+      "tipo": "Cross-sell",
+      "forecast": "Pipeline",
+      "owner": "Vinicyus Fernando",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/36823028374",
+      "freeze": true
     },
     {
       "name": "Eternit - Fiscal",
       "stage": "Freeze",
       "valor": 4022.15,
       "tipo": "Cross-sell",
-      "forecast": "",
+      "forecast": "Pipeline",
       "owner": "Paschoal De Lascio",
       "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/50770240893",
       "freeze": true
-    },
-    {
-      "name": "Positivo S+ - Expansão",
-      "stage": "Discovery",
-      "valor": 7000.0,
-      "tipo": "Cross-sell",
-      "forecast": "",
-      "owner": "Vinicyus Magalhães",
-      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/50524340797",
-      "freeze": false
     },
     {
       "name": "Columbia - Financeiro",
@@ -339,64 +381,34 @@
       "name": "Bayer - Migração",
       "stage": "Freeze",
       "valor": 0.0,
-      "tipo": "Upsell",
-      "forecast": "",
-      "owner": "Vinicyus Magalhães",
-      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/43419792520",
-      "freeze": true
-    },
-    {
-      "name": "Mercedes - Caminhões -  Controladoria de Projetos de Produto",
-      "stage": "Proposal",
-      "valor": 14183.55,
-      "tipo": "Cross-sell",
-      "forecast": "Best case",
-      "owner": "Vinicyus Magalhães",
-      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/43319723184",
-      "freeze": false
-    },
-    {
-      "name": "Mercedes - Caminhões - Contabilidade",
-      "stage": "Tech Validation",
-      "valor": 13000.0,
       "tipo": "Cross-sell",
       "forecast": "Pipeline",
-      "owner": "Vinicyus Magalhães",
-      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/43288812936",
-      "freeze": false
-    },
-    {
-      "name": "ICBC - Expansão",
-      "stage": "Freeze",
-      "valor": 5277.6,
-      "tipo": "Upsell",
-      "forecast": "",
-      "owner": "Vinicyus Magalhães",
-      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/36823028374",
+      "owner": "Vinicyus Fernando",
+      "hubspot_url": "https://app.hubspot.com/contacts/24368585/record/0-3/43419792520",
       "freeze": true
     }
   ],
   "comparisons": {
     "mes-anterior": {
-      "label": "Mar/2026",
+      "label": "Março/2026",
       "proposal": 0,
-      "negotiation": 0,
+      "negotiation": 1,
       "aboutclose": 2,
       "won": 1
     },
     "mesmo-mes-ano": {
-      "label": "Abr/2025",
+      "label": "Abril/2025",
       "proposal": 0,
       "negotiation": 0,
       "aboutclose": 0,
-      "won": 1
+      "won": 5
     },
     "trimestre-anterior": {
       "label": "Q4/2025",
       "proposal": 0,
       "negotiation": 0,
       "aboutclose": 0,
-      "won": 6
+      "won": 10
     }
   }
 }
